@@ -1,0 +1,54 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+h1,h3 {
+    color: brown;
+}
+
+h2 {
+    color: cornflowerblue;
+}
+
+.reserve-btn{
+  border: #0a65aa;
+  border-radius: 5px;
+  background-color: cornflowerblue;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  display: none;
+}
+.movie-content{
+    cursor: pointer;
+}
+.movie-content-clicked{
+    background-color: rgb(125, 214, 169);
+    transition: background-color .6s;
+    border-radius: 5px;   
+}
+.pop-up{
+    background-color: #bb25b3;
+    width: 400px;
+    transform: translate(-50%);
+    left: 50%;
+    top: 150px;
+    color: #fff;
+    height: auto;
+    display: none;
+    margin: 0 auto;
+}
+.show{
+    display: block !important;
+}
+.confirm-reservation-btn{
+    border: #0a65aa;
+    border-radius: 5px;
+    background-color: cornflowerblue;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+}
+ 

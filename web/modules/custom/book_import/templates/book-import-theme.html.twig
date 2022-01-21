@@ -1,0 +1,28 @@
+{{ attach_library('book_import/book_import') }}
+<h1>{{"Vrednosti iz url"}}</h1>
+<table border="1" >
+    <thead>
+        <tr>
+            <th>Book ISBN</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Comments</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for item in knjiga %}
+        <tr>
+            <td>{{item.isbn}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.comments.userComment}}</td>
+        </tr>
+    {% endfor %}    
+    </tbody>
+    </table><br>
+<form class="external-url" action="./book-import">
+  <label>External url:</label><br>
+  <input type="text" id="fname" name="extURL" value=""><br>
+  <input class="submit-url-form" type="submit" value="Submit">
+</form>
+ 

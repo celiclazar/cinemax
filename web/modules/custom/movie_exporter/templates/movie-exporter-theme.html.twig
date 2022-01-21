@@ -1,0 +1,27 @@
+{{ attach_library('movie_exporter/movie_exporter') }}
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>  
+<h2>Choose data type</h2>
+<form>
+   {% if file_type_response  == "csv" %}
+     <select id="movie_file_type">
+      <option selected value="csv">CSV</option>
+      <option value="xml">XML</option>
+    </select><br>
+    <button id="download"> <a href="movies.csv" download>Download</a></button>
+   {% elseif file_type_response  == "xml"  %}
+     <select id="movie_file_type">
+      <option value="csv">CSV</option>
+      <option selected value="xml">XML</option>
+    </select><br>
+   <button id="download"> <a href="movies.xml" download>Download</a></button>
+  {% else %} 
+    <select id="movie_file_type">
+      <option value="" selected >Choose here</option>
+      <option value="csv">CSV</option>
+      <option value="xml">XML</option>
+    </select><br>
+   {% endif %}
+</form>
+ 

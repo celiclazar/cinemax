@@ -1,0 +1,10 @@
+book_import:
+  path: '/book-import'
+  defaults:
+    _controller: '\Drupal\book_import\Controller\BookImportController::importBooks'
+    _title: 'Import books page'
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: 'TRUE'
+ 

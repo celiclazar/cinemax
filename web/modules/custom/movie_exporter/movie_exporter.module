@@ -1,0 +1,15 @@
+<?php
+
+function movie_exporter_theme($existing, $type, $theme, $path) {
+
+  return array(
+    
+    'movie_exporter_theme' => array(
+      'variables' => array(
+        'title' => '',
+        'file_type_response' => ''
+      )
+    )
+  );
+}
+ 

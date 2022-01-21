@@ -1,0 +1,19 @@
+h1,h3 {
+    color: brown;
+}
+h2 {
+    color: cornflowerblue;
+}
+.external-url {
+    border: rgb(27, 102, 189) solid 2px;
+    border-radius: 20px;
+    padding: 10px;
+}
+.submit-url-form {
+    border: #0a65aa;
+    border-radius: 50% 20% / 10% 40%;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    }
+  

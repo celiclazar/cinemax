@@ -1,0 +1,11 @@
+name: Movie reservation
+description: Module for reservation movies on site.
+core_version_requirement: ^8 || ^9
+type: module
+base theme: classy
+libraries:
+  - movie_reservation/movie_reservation
+regions:
+  content: Content
+  featured: Featured
+  

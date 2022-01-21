@@ -1,0 +1,8 @@
+name: Movie exporter
+description: This module export movies into extension (XML or CSV)
+type: module
+core_version_requirement: ^8 || ^9
+package: Custom
+libraries:
+  - movie_exporter/movie_exporter
+ 

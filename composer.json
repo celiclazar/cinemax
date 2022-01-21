@@ -22,7 +22,8 @@
     "drupal/entity_browser": "^2.6",
     "drupal/entity_usage": "^2.0@beta",
     "drupal/paragraphs": "^1.12",
-    "drupal/search_api": "^1.22"
+    "drupal/search_api": "^1.22",
+    "drupal/twig_debugger": "^1.1"
   },
   "conflict": {
     "drupal/drupal": "*"

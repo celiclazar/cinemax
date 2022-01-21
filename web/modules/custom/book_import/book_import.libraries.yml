@@ -1,0 +1,10 @@
+book_import:
+  version: 1.0
+  css:
+    theme:
+      css/bookPage.css: {}
+  js:
+      js/example.js: {}
+  dependencies:
+    - core/jquery
+ 

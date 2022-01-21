@@ -1,0 +1,8 @@
+name: Book Import
+description: Module for importing external XML to database.
+core_version_requirement: ^8 || ^9
+type: module
+package: Custom
+libraries:
+  - book_import/book_import
+ 

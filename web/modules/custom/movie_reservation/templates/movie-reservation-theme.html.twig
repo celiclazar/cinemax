@@ -1,0 +1,56 @@
+{{ attach_library('movie_reservation/movie_reservation') }}
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+</head>
+<body>
+  <h3> {{ 'Please select movie genre for which you would like to make a reservation:' |t }}</h3> <br>
+    <select name="movie-genre" id="movie-genre">
+      <option value="">Choose genre..</option>
+      <option value="0" >All movies</option>
+      {% for movie_genre in list_of_genres %}
+        <option value="{{movie_genre.tid }}">{{ movie_genre.name }}</option>
+      {% endfor %}
+    </select>
+  <h2> {{ "List of movies for selected genre:"  }} </h2><br>
+    <div class='show-content' id=''>
+      {% if movies|length > 0 %}
+      {% for movie in movies %}
+      <hr>
+    <div class="movie-content" id="{{ movie.nid.value }}">
+        <h3>{{ movie.title.value }}</h3>
+        <p class="">{{ movie.field_movie_description.value|striptags }}</p><br>
+        <img src="{{ file_url(movie.field_movie_image.entity.uri.value) }}" width="300px" height="500px"><br>
+    </div>
+        <button class="reserve-btn" id="reserve-btn-{{ movie.id }}">Reserve movie</button>
+      <hr>
+    <div class="pop-up" id="popup-{{ movie.nid.value }}">
+      <form method="post" class="reserve-form" id="reserve-form">
+        {% for day in movie.field_movie_days %}
+          <input type="radio" value="{{ day.value }}" name="day"><span>{{ day.value }}</span><br><br>
+        {% endfor %}
+        Type your name: <br>
+        <input type="text" name="customerName" id="input-name-{{ movie.nid.value }}" autocomplete="off">  
+        <input type="submit" id="submit-reservation{{ movie.nid.value }}" class="confirm-reservation-btn" value="Confirm your movie reservation">
+      </form>
+    </div>
+      <div class="" id="{{ movie.nid.value }}">
+        <h3>{{ movie.title.value }}</h3>
+        <p class="">{{ movie.field_movie_description.value|striptags }}</p><br>
+        <img src="{{ file_url(movie.field_movie_image.entity.uri.value) }}" width="300px" height="500px"><br>
+      </div>
+      <div class="" id="{{ movie.nid.value }}">
+        <h3>{{ movie.title.value }}</h3>
+        <p class="">{{ movie.field_movie_description.value|striptags }}</p><br>
+        <img src="{{ file_url(movie.field_movie_image.entity.uri.value) }}" width="300px" height="500px"><br>
+      </div>
+      {% endfor %} 
+    {% else %}
+      <h3>There are no movies of that genre...</h3><br>
+    {% endif %}
+
+    </div>
+  </div>
+</body>
+ 

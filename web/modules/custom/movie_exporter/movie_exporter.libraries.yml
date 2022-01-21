@@ -1,0 +1,10 @@
+movie_exporter:
+  version: 1.0
+  css:
+    theme:
+      css/exportMovies.css: {}
+  js:
+      js/exportMovies.js: {}
+  dependencies:
+    - core/jquery
+ 

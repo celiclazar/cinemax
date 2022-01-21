@@ -1,0 +1,16 @@
+<?php
+
+function movie_reservation_theme($existing, $type, $theme, $path) {
+
+  return array (
+
+    'movie_reservation_theme' => array (
+      'variables' => array(
+        'movies' => array(), 
+        'title' => '',
+        'list_of_genres' => array(),
+         )
+    )
+  );
+}
+ 

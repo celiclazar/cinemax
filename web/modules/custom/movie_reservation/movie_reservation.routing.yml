@@ -1,0 +1,10 @@
+movie_reservation:
+  path: '/movie-reservation'
+  defaults:
+    _controller: '\Drupal\movie_reservation\Controller\MovieReservationController::exportMovies'
+    _title: 'Movie reservation'
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: 'TRUE'  
+ 

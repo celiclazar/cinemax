@@ -1,0 +1,8 @@
+movie-exporter:
+  path: '/movie-exporter'
+  defaults:
+    _controller: '\Drupal\movie_exporter\Controller\MovieExporterController::exportMovies'
+    _title: 'Movie exporter page'
+  requirements:
+    _permission: 'access content'
+ 

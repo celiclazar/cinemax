@@ -1,0 +1,4 @@
+services:
+  book_import.xml:
+    class: Drupal\book_import\ImportBookXML
+ 
