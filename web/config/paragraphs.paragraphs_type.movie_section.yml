@@ -1,0 +1,11 @@
+uuid: 1193f802-3d21-42f6-b0f8-cbceeb718c43
+langcode: en
+status: true
+dependencies: {  }
+id: movie_section
+label: 'Movie Section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
+ 
