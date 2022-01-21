@@ -11,13 +11,14 @@ use Drupal\Core\Ajax\HtmlCommand;
 class MovieExporterController {
 
     public function exportMovies(){
-
+    
      $export_query = \Drupal::entityQuery('node')
         ->condition('type', 'movie')
         ->condition('field_include_in_exporter', 1)
         ->execute();
      $exported_movies = \Drupal\node\Entity\Node::loadMultiple($export_query);
      $file_type = \Drupal::request()->query->get('fileType');
+     $file_type_response = "";
       if (isset($file_type)){
         if ( $file_type == 'csv' ) {
             $this->CreateCSV ($exported_movies);
@@ -43,7 +44,7 @@ class MovieExporterController {
 
          $movie = $xml->addChild('movie');
          $movie->addChild('title', $node->title->value);
-         $movie->addChild('description', $node->field_description->value);
+         $movie->addChild('description', $node->field_movie_description->value);
       }
 
      $movie_xml_content = $xml->asXML();
@@ -57,7 +58,7 @@ class MovieExporterController {
      foreach ($exported_movies as $node){
          $csv_content[] = array (
             array($node->title->value),
-            array($node->field_description->value) 
+            array($node->field_movie_description->value) 
         );
         
      $file_movieCSV = fopen ("movies.csv", "w");
